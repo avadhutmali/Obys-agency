@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +6,18 @@
     font-family: "plain light";
     color: #fff;
 }
+.crsr{
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+    border: 2px solid #6E6E6E;
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
+
+}
+
 html, body{
     height: 100%;
     width: 100%;
@@ -99,4 +112,51 @@ html, body{
     height: 100vh;
     width: 100%;
     background-color: #151515;
+}
+.page1 .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 4.5vw;
+}
+.nav-p2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+.nav-p2 h4{
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+.hero{
+    width: 72%;
+    margin-left: 27%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+
+}
+.hero:nth-child(2){
+    margin-top: 16vh;
+}
+.hero h1{
+    font-size: 7.2vw;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    font-weight: 600;
+}
+.hero h2, .hero h3{
+    font-size: 7.2vw;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    font-weight: 600;
+}
+.hero h2:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    font-weight: 500;
 }
