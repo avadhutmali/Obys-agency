@@ -17,10 +17,19 @@
     transform: translate(-50%,-50%);
 
 }
+.mousefollower{
+    border: 2px solid #fff;
+    background-color: #fff;
+    scale: 2;
+    mix-blend-mode: difference;
+}
 
 html, body{
     height: 100%;
-    width: 100%;
+    width: 101%;
+}
+body{
+    overflow-x: hidden;
 }
 .loader{
     height: 100%;
@@ -75,7 +84,7 @@ html, body{
    
 }
 
-@keyframes anime {
+@keyframes anime2 {
     0%{
         font-family: "Plain light";
         -webkit-text-stroke: 1px #fff;
@@ -106,12 +115,13 @@ html, body{
 
 .main{
     position: relative;
-    background-color: #030303;
+    background-color: #151515;
 }
 .page1{
     height: 100vh;
     width: 100%;
     background-color: #151515;
+    margin-bottom: 20vh;
 }
 .page1 .nav{
     display: flex;
@@ -148,8 +158,9 @@ html, body{
     text-transform: uppercase;
     line-height: 7.2vw;
     font-weight: 600;
+    position: relative;
 }
-.hero h2, .hero h3{
+.hero h2{
     font-size: 7.2vw;
     text-transform: uppercase;
     line-height: 7.2vw;
@@ -159,4 +170,770 @@ html, body{
     -webkit-text-stroke: 2px #fff;
     color: transparent;
     font-weight: 500;
+    /* border-bottom: 0.5vw solid white; */
+}
+.page2{
+    height: 100vh;
+    width: 100%;
+    padding-top: 17ch;
+    position: relative;
+    background-color: #151515;
+}
+.video-container{
+    height: 66vh;
+    width: 71vw;
+    position: relative;
+    left: 28%;
+    background-color: red;
+    background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.video-container img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+.video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+.video-cursor{
+    background-color: #FFA63D;
+    height: 8.5vw;
+    width: 8.5vw;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -15%;
+    left: 80%;
+    z-index: 999;
+}
+
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+    padding: 17vh 2vh;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+
+}
+.page3 h1{
+    font-size: 6vw;
+    text-transform: uppercase;   
+    position: relative;
+    margin-left: 28vw;
+}
+.page3 .underline{
+    margin-left: 28vw;
+}
+.page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 5vw;
+    font-family: silk serif;
+    font-size: 3vw;
+    font-weight: 100;
+    left: -12%;
+    top: 10%;
+}
+.image-div-container{
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    
+
+}
+.image-div{
+    height: 38vw;
+    width: 27vw;
+    position: relative;
+    flex-shrink: 0;
+    margin: 2vw;
+    overflow: hidden;
+}
+.image-div:nth-child(1){
+    height: 29vw;
+    width: 22vw;
+}
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.page3-circle{
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20vh;
+    margin-left: 10vw;
+}
+.page3-circle svg{
+    height: 30%;
+}
+.page3-circle2{
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+.page3-circle2 svg{
+    height: 30%;
+    rotate: -45deg;
+}
+.circle-in{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+    
+}
+.circle-in p{
+    font-size: 0.95vw;
+    color: #030303;
+    font-weight: 500;
+    scale: 0;
+    width: 70%;
+    transition: all ease 0.3s;
+    transition-delay: 0.3s;
+    opacity: 0;
+
+}
+.page3-circle:hover .circle-in{
+    scale: 1;
+}
+.page3-circle:hover p{
+    scale: 1;
+    opacity: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+}
+.page3-circle2:hover p{
+    scale: 1;
+    opacity: 1;
+}
+
+
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+    padding: 7vh 0;
+
+}
+.page4-content{
+    width: 72vw;
+    margin-left: 28vw;
+}
+.page4-content h1{
+    font-size: 6vw;
+    text-transform: uppercase;   
+    position: relative;
+}
+.page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 5vw;
+    font-family: silk serif;
+    font-size: 3vw;
+    font-weight: 100;
+    left: -12%;
+    top: 10%;
+}
+.page4-content .underline{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+.page4-content>p{
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+.page4-flex{
+    display: flex;
+}
+.page4-flex img{
+    width: 48%;
+}
+.page4-flex p{
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1vw;
+}
+.page4-bluediv{
+    background-color: #3F7DF4;
+    width: 33vw;
+    padding: 4vw 2vw;
+    position: relative;
+    margin-top: -40vh;
+    margin-left: 25vw;
+
+}
+.blue-div-e{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.7vw 0;
+    border-bottom: 2px solid #fff;
+}
+.blue-div-e p{
+    width: 50%;
+    font-size: 0.7vw;
+
+}
+.blue-div-e h4{
+    font-size: 1.35vw;
+    font-weight: 500;
+
+}
+.page5{
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw 0;
+    position: relative;
+    background-color: #151515;
+}
+.elem{
+    white-space: nowrap;
+    margin-bottom: 1vw;  
+}
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem2{
+    white-space: nowrap;
+    margin-bottom: 1vw;  
+}
+.elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    transform: translateX(calc(-100% - 20px));
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.elem span{
+    font-style: italic;
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+.elem2 span{
+    font-style: italic;
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+.footer{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 5vw;
+    background-color: #151515;
+
+}
+.footer h1{
+    font-size: 7vw;
+    width: 60vw;
+    text-transform: uppercase;
+}
+.footer h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+.footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 5vw;
+    font-family: silk serif;
+    font-size: 3vw;
+    font-weight: 100;
+    left: -12%;
+    top: 10%;
+}
+.underline{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 2vw 0;
+}
+.footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 3vw;
+}
+.footer-div h6{
+    font-size: 0.9vw;
+    margin-bottom: 1.5vw;
+}
+.box{
+    width: 20%;
+}
+.footer-div h5{
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin: 0.2vh 0;
+}
+.footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
+}
+._canvas_container{
+    z-index: 99999999 !important;
+    pointer-events: none;
+}
+#flag{
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+#hero3{
+    z-index: 999;
+}
+@media (max-width:600px){
+    .page1{
+        height: 55vh;
+        width: 100%;
+        background-color: #151515;
+        margin-bottom: 0;
+        padding-top: 1px;
+    }
+    .page1 .nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 4.3vw 5vw;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    .page1 svg{
+        scale: 0.8;
+    }
+    .nav-p2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3vw;
+        display: none;
+    }
+    .nav-p2 h4{
+        font-size: 0.8vw;
+        font-weight: 500;
+    }
+    .hero{
+        width: 72%;
+        margin-left: 5%;
+        height: fit-content;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 999;
+    
+    }
+    .hero:nth-child(2){
+        margin-top: 25vh;
+    }
+    .hero h1{
+        font-size: 9.5vw;
+        text-transform: uppercase;
+        line-height: 9.5vw;
+        font-weight: 600;
+        position: relative;
+    }
+    .hero h2{
+        font-size: 9.5vw;
+        text-transform: uppercase;
+        line-height: 9.5vw;
+        font-weight: 600;
+    }
+    .page2{
+        height: 58vh;
+        width: 100%;
+        padding-top: 6vh;
+        position: relative;
+        background-color: #151515;
+    }
+    .video-container{
+        height: 52vh;
+        width: 100%;
+        position: relative;
+        left: 0%;
+        background-color: red;
+        background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .video-container img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        top: 0;
+    }
+    .video-container video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0;
+    }
+    .video-cursor{
+        background-color: #FFA63D;
+        height: 20vw;
+        width: 20vw;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        transform: translate(-50% , -50%);
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        z-index: 999;
+    }
+
+    .page3{
+        min-height: 100vh;
+        width: 100%;
+        background-color: #151515;
+        position: relative;
+        padding: 17vh 3vw 0 3vw;
+        margin-bottom: 0vh;
+        margin-top: 0vh;
+    
+    }
+    .page3 h1{
+        font-size: 9.5vw;
+        text-transform: uppercase;   
+        position: relative;
+        margin-left: 2vw;
+        margin-bottom: 5vw;
+    }
+    .page3 .underline{
+        margin-left: 2vw;
+        width: 94%;
+    }
+    .page3 h1::before{
+        content: "02";
+        position: absolute;
+        font-size: 5vw;
+        font-family: silk serif;
+        font-size: 3vw;
+        font-weight: 100;
+        left: 0%;
+        top: -56%;
+    }
+    .image-div-container{
+        padding-top: 10vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;    
+    }
+    .image-div{
+        height: 110vw;
+        width: 90vw;
+        position: relative;
+        flex-shrink: 0;
+        margin: 2vw;
+        overflow: hidden;
+        margin-bottom: 8vw;
+    }
+    .image-div:nth-child(1){
+        height: 110vw;
+        width: 90vw;
+    }
+    .image-div img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .page3-circle{
+        display: none;
+    }
+    .page3-circle2{
+        display: none;
+    }
+
+    
+    .page4{
+        min-height: 100vh;
+        width: 100%;
+        background-color: #151515;
+        position: relative;
+        padding: 10vh 5vw;
+    
+    }
+    .page4-content{
+        width: 90vw;
+        margin-left: 0vw;
+    }
+    .page4-content h1{
+        font-size: 9.5vw;
+        text-transform: uppercase;   
+        position: relative;
+    }
+    .page4-content h1::before{
+        content: "03";
+        position: absolute;
+        font-size: 5vw;
+        font-family: silk serif;
+        font-size: 3vw;
+        font-weight: 100;
+        left: -12%;
+        top: 10%;
+    }
+    .page4-content .underline{
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        margin: 5vw 0 8vw 0;
+    }
+    .page4-content>p{
+        font-size: 6vw;
+        width: 90%;
+        margin-bottom: 3vw;
+    }
+    .page4-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .page4-flex img{
+        width: 100%;
+        margin: 5vw 0 8vw 0;
+    }
+    .page4-flex p{
+        font-size: 4vw;
+        width: 90%;
+        margin-left: 0vw;
+        margin-bottom: 5vw;
+    }
+    .page4-bluediv{
+        background-color: #3F7DF4;
+        width: 90vw;
+        padding: 5vw;
+        position: relative;
+        margin-top: 0vh;
+        margin-left: 0vw;
+        padding-bottom: 15vw;
+    
+    }
+    .blue-div-e{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 4.7vw 0;
+        border-bottom: 2px solid #fff;
+    }
+    .blue-div-e p{
+        width: 50%;
+        font-size: 3vw;
+    
+    }
+    .blue-div-e h4{
+        font-size: 3.9vw;
+        font-weight: 500;
+    
+    }
+    .page4-content .underline:nth-last-child(1){
+        margin: 26vw 0 7vw 0;
+    }
+
+    /* page5 */
+    .page5{
+        min-height: 60vh;
+        width: 100%;
+        padding: 5vw 0;
+        position: relative;
+        background-color: #151515;
+    }
+    .elem{
+        white-space: nowrap;
+        margin-bottom: 1vw;  
+    }
+    .elem h1{
+        font-size: 12vw;
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: transparent;
+        display: inline-block;
+        margin-right: 16px;
+        animation-name: anime;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes anime {
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(calc(-100% - 20px));
+        }
+    }
+    .elem2{
+        white-space: nowrap;
+        margin-bottom: 1vw;  
+    }
+    .elem2 h1{
+        font-size: 12vw;
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: transparent;
+        display: inline-block;
+        margin-right: 16px;
+        transform: translateX(calc(-100% - 20px));
+        animation-name: anime;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+    }
+    .elem span{
+        font-style: italic;
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+    }
+    .elem2 span{
+        font-style: italic;
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+    }
+    .footer{
+        height: 109vh;
+        width: 100%;
+        position: relative;
+        padding: 5vw;
+        background-color: #151515;
+    }
+    .footer h1{
+        font-size: 7vw;
+        width: 60vw;
+        text-transform: uppercase;
+    }
+    .footer h1{
+        font-size: 9.7vw;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .footer h1::before{
+        content: "04";
+        position: absolute;
+        font-size: 5vw;
+        font-family: silk serif;
+        font-size: 3vw;
+        font-weight: 100;
+        left: 0%;
+        top: -68%;
+    }
+    .underline{
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        margin: 8vw 0;
+    }
+    .footer-div{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding-right: 15vw;
+        padding-top: 4vw;
+        margin-bottom: 3vw;
+    }
+    .footer-div h6{
+        font-size: 4.9vw;
+        margin-bottom: 3.5vw;
+    }
+    .box{
+        width: 30%;
+        margin-bottom: 5vw;
+    }
+    .footer-div h5{
+        font-size: 5.4vw;
+        font-weight: 500;
+        margin: 0.2vh 0;
+        margin-bottom: 1.5vw;
+    }
+    .footer>h5{
+        font-weight: 500;
+        margin-bottom: 4vw;
+        font-size: 4vw;
+    }
+    
 }
