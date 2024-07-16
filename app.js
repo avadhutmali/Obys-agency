@@ -47,7 +47,7 @@ tl.from(".line1-p1 , .line1 h2",{
         if(grow<100){
             h5timer.innerHTML = grow++;
         }else h5timer.innerHTML = grow;
-        },25)
+        },28)
     }
 })
 tl.to(".line1 h2",{
@@ -57,12 +57,12 @@ tl.to(".line1 h2",{
 tl.to(".loader" ,{
     opacity:0,
     duration:0.2,
-    delay:0.6,
+    delay:2.6,
 })
 tl.from(".page1",{
     y:1600,
     delay:0.1,
-    duration:0.2,
+    duration:0.5,
     opacity:0,
     ease: "power4"
 })

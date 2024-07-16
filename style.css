@@ -1,8 +1,26 @@
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-regular-webfont.ttf);
+}
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-light-webfont.ttf);
+}
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+}
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+}
+
 
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: "plain light";
     color: #fff;
 }
@@ -14,7 +32,9 @@
     position: fixed;
     z-index: 999;
     mix-blend-mode: difference;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
 
 }
 .mousefollower{
@@ -40,11 +60,19 @@ body{
     padding: 25vh 10vw;
 }
 .line1{
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     gap: 1.2vw;
 }
 
@@ -54,9 +82,15 @@ body{
     font-weight:900 ;
 }
 .line1 .line1-p1{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2vw;
 }
 
@@ -65,8 +99,10 @@ body{
     text-transform: uppercase;
     font-weight: 900;
     opacity: 0;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 
 }
 
@@ -82,6 +118,35 @@ body{
     text-align: right;
     width: 5vw;
    
+}
+
+@-webkit-keyframes anime2 {
+    0%{
+        font-family: "Plain light";
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    47%{
+        font-family: "Plain light";
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
 }
 
 @keyframes anime2 {
@@ -124,15 +189,27 @@ body{
     margin-bottom: 20vh;
 }
 .page1 .nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 2.3vw 4.5vw;
 }
 .nav-p2{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 3vw;
 }
 .nav-p2 h4{
@@ -142,10 +219,16 @@ body{
 .hero{
     width: 72%;
     margin-left: 27%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     z-index: 999;
 
@@ -193,13 +276,15 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     top: 0;
 }
 .video-container video{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     opacity: 0;
 }
 .video-cursor{
@@ -208,9 +293,15 @@ body{
     width: 8.5vw;
     border-radius: 50%;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     top: -15%;
     left: 80%;
     z-index: 999;
@@ -248,10 +339,17 @@ body{
 .image-div-container{
     padding: 1vw;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     
 
 }
@@ -259,7 +357,8 @@ body{
     height: 38vw;
     width: 27vw;
     position: relative;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     margin: 2vw;
     overflow: hidden;
 }
@@ -270,17 +369,25 @@ body{
 .image-div img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
 }
 .page3-circle{
     height: 23vw;
     width: 23vw;
     border: 2px solid #fff;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     margin-top: 20vh;
     margin-left: 10vw;
@@ -293,10 +400,16 @@ body{
     width: 23vw;
     border: 2px solid #fff;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .page3-circle2 svg{
     height: 30%;
@@ -310,11 +423,19 @@ body{
     position: absolute;
     background-color: #fff;
     color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     scale: 0;
     border-radius: 50%;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
     
 }
@@ -324,8 +445,12 @@ body{
     font-weight: 500;
     scale: 0;
     width: 70%;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
     transition: all ease 0.3s;
-    transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s;
+         -o-transition-delay: 0.3s;
+            transition-delay: 0.3s;
     opacity: 0;
 
 }
@@ -384,6 +509,8 @@ body{
     margin-bottom: 3vw;
 }
 .page4-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .page4-flex img{
@@ -404,9 +531,15 @@ body{
 
 }
 .blue-div-e{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1.7vw 0;
     border-bottom: 2px solid #fff;
 }
@@ -439,17 +572,33 @@ body{
     color: transparent;
     display: inline-block;
     margin-right: 16px;
-    animation-name: anime;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: anime;
+            animation-name: anime;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+@-webkit-keyframes anime {
+    from{
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    to{
+        -webkit-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
+    }
 }
 @keyframes anime {
     from{
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
     to{
-        transform: translateX(calc(-100% - 20px));
+        -webkit-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
     }
 }
 .elem2{
@@ -464,11 +613,17 @@ body{
     color: transparent;
     display: inline-block;
     margin-right: 16px;
-    transform: translateX(calc(-100% - 20px));
-    animation-name: anime;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    -webkit-transform: translateX(calc(-100% - 20px));
+        -ms-transform: translateX(calc(-100% - 20px));
+            transform: translateX(calc(-100% - 20px));
+    -webkit-animation-name: anime;
+            animation-name: anime;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     animation-direction: reverse;
 }
 .elem span{
@@ -519,9 +674,15 @@ body{
     margin: 2vw 0;
 }
 .footer-div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     padding-right: 15vw;
     padding-top: 4vw;
     margin-bottom: 3vw;
@@ -551,7 +712,9 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     opacity: 0;
 }
 #hero3{
@@ -566,9 +729,15 @@ body{
         padding-top: 1px;
     }
     .page1 .nav{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         padding: 4.3vw 5vw;
         position: fixed;
         width: 100%;
@@ -578,9 +747,15 @@ body{
         scale: 0.8;
     }
     .nav-p2{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 3vw;
         display: none;
     }
@@ -591,10 +766,16 @@ body{
     .hero{
         width: 72%;
         margin-left: 5%;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         position: relative;
         z-index: 999;
     
@@ -636,13 +817,15 @@ body{
         position: absolute;
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         top: 0;
     }
     .video-container video{
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         opacity: 0;
     }
     .video-cursor{
@@ -651,10 +834,18 @@ body{
         width: 20vw;
         border-radius: 50%;
         position: absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        transform: translate(-50% , -50%);
-        justify-content: center;
-        align-items: center;
+        -webkit-transform: translate(-50% , -50%);
+            -ms-transform: translate(-50% , -50%);
+                transform: translate(-50% , -50%);
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         top: 50%;
         left: 50%;
         z-index: 999;
@@ -694,17 +885,28 @@ body{
     .image-div-container{
         padding-top: 10vw;
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-wrap: wrap;    
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;    
     }
     .image-div{
         height: 110vw;
         width: 90vw;
         position: relative;
-        flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
         margin: 2vw;
         overflow: hidden;
         margin-bottom: 8vw;
@@ -716,8 +918,10 @@ body{
     .image-div img{
         height: 100%;
         width: 100%;
-        object-fit: cover;
-        object-position: center;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
     }
     .page3-circle{
         display: none;
@@ -766,8 +970,13 @@ body{
         margin-bottom: 3vw;
     }
     .page4-flex{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .page4-flex img{
         width: 100%;
@@ -790,9 +999,15 @@ body{
     
     }
     .blue-div-e{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 4.7vw 0;
         border-bottom: 2px solid #fff;
     }
@@ -830,17 +1045,33 @@ body{
         color: transparent;
         display: inline-block;
         margin-right: 16px;
-        animation-name: anime;
-        animation-duration: 10s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        -webkit-animation-name: anime;
+                animation-name: anime;
+        -webkit-animation-duration: 10s;
+                animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+    }
+    @-webkit-keyframes anime {
+        from{
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
+        }
+        to{
+            -webkit-transform: translateX(calc(-100% - 20px));
+                    transform: translateX(calc(-100% - 20px));
+        }
     }
     @keyframes anime {
         from{
-            transform: translateX(0);
+            -webkit-transform: translateX(0);
+                    transform: translateX(0);
         }
         to{
-            transform: translateX(calc(-100% - 20px));
+            -webkit-transform: translateX(calc(-100% - 20px));
+                    transform: translateX(calc(-100% - 20px));
         }
     }
     .elem2{
@@ -855,11 +1086,17 @@ body{
         color: transparent;
         display: inline-block;
         margin-right: 16px;
-        transform: translateX(calc(-100% - 20px));
-        animation-name: anime;
-        animation-duration: 10s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        -webkit-transform: translateX(calc(-100% - 20px));
+            -ms-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
+        -webkit-animation-name: anime;
+                animation-name: anime;
+        -webkit-animation-duration: 10s;
+                animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
         animation-direction: reverse;
     }
     .elem span{
@@ -908,10 +1145,19 @@ body{
         margin: 8vw 0;
     }
     .footer-div{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        flex-direction: column;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding-right: 15vw;
         padding-top: 4vw;
         margin-bottom: 3vw;
